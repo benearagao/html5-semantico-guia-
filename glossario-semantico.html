@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML5 Semântico — Guia Rápido</title>
+  <meta name="description" content="Guia rápido e pesquisável de tags semânticas do HTML5 com exemplos, boas práticas e checklist." />
+  <meta name="author" content="Bené Aragão" />
+  <meta name="keywords" content="HTML5, semântica, acessibilidade, tags, guia, desenvolvimento web, W3C" />
+  <meta name="theme-color" content="#7dd3fc" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Preconnect for potential external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container wrap">
+      <div class="brand">
+        <h1>HTML5 Semântico — Guia Rápido</h1>
+        <span class="badge">consulta prática</span>
+      </div>
+      <nav class="chips-nav" aria-label="Atalhos de seção">
+        <a class="chip" href="#landmarks"><span class="dot"></span>Landmarks</a>
+        <a class="chip" href="#inline"><span class="dot"></span>Texto (inline)</a>
+        <a class="chip" href="#codigo"><span class="dot"></span>Código & dados</a>
+        <a class="chip" href="#listas"><span class="dot"></span>Listas</a>
+        <a class="chip" href="#midia"><span class="dot"></span>Mídia</a>
+        <a class="chip" href="#tabelas"><span class="dot"></span>Tabelas</a>
+        <a class="chip" href="#formularios"><span class="dot"></span>Formulários</a>
+        <a class="chip" href="#interatividade"><span class="dot"></span>Interatividade</a>
+        <a class="chip" href="#direcao"><span class="dot"></span>Direção & i18n</a>
+        <a class="chip" href="#tematica"><span class="dot"></span>Quebra temática</a>
+        <a class="chip" href="#embutidos"><span class="dot"></span>Embutidos</a>
+        <a class="chip" href="#metadados"><span class="dot"></span>Metadados</a>
+        <a class="chip" href="#nao-semanticos"><span class="dot"></span>Não semânticos</a>
+        <a class="chip" href="#az"><span class="dot"></span>A–Z</a>
+        <a class="chip" href="#checklist"><span class="dot"></span>Checklist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container" role="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title" style="margin:0 0 6px">Como usar</h2>
+      <p>Pesquise por uma tag ou percorra as seções. Cada cartão traz significado, quando usar e um exemplo mínimo. O guia reforça acessibilidade e boas práticas.</p>
+      <div class="toolbar">
+        <div class="search">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.2-4.2M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <label for="busca" class="sr-only">Buscar tags</label>
+          <input id="busca" type="search" placeholder="Buscar: article, time, figure…" aria-describedby="contagem" />
+        </div>
+        <div class="counter" id="contagem" aria-live="polite">Mostrando todas as seções</div>
+      </div>
+    </section>
+
+    <!-- Landmarks -->
+    <section id="landmarks" class="section" aria-labelledby="landmarks-title">
+      <header>
+        <h2 id="landmarks-title">Landmarks (marcos) da página</h2>
+        <p>Estruturam o esqueleto do documento e criam pontos de navegação para tecnologias assistivas.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="main conteúdo principal landmark">
+          <h3><code>&lt;main&gt;</code> — conteúdo principal</h3>
+          <div class="meta"><span class="pill">1× por página</span><span class="pill">marco de navegação</span></div>
+          <p>Contém o conteúdo primário do documento. Não inclui cabeçalhos, barras laterais ou rodapés.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;main&gt;
+  &lt;h1&gt;Notícias&lt;/h1&gt;
+  &lt;!-- conteúdo principal --&gt;
+&lt;/main&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="header cabeçalho seção landmark">
+          <h3><code>&lt;header&gt;</code> — cabeçalho</h3>
+          <p>Introdução de página ou seção; pode conter logotipo, título e navegação local.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;header&gt;
+  &lt;h1&gt;Meu Site&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="footer rodapé seção landmark">
+          <h3><code>&lt;footer&gt;</code> — rodapé</h3>
+          <p>Informações de autoria, direitos, links contextuais, contatos.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;footer&gt;© 2025 — Bené Aragão&lt;/footer&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="nav navegação menu breadcrumb paginação landmark">
+          <h3><code>&lt;nav&gt;</code> — navegação</h3>
+          <p>Bloco de links principais ou secundários (menus, breadcrumbs, paginação).</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;nav aria-label="principal"&gt;
+  &lt;ul&gt;&lt;li&gt;&lt;a href="/"&gt;Início&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="section seção temática título grouping">
+          <h3><code>&lt;section&gt;</code> — seção temática</h3>
+          <p>Agrupa conteúdo relacionado que exige um <em>título próprio</em>.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;section&gt;
+  &lt;h2&gt;Serviços&lt;/h2&gt;
+  &lt;p&gt;Descrição…&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="article artigo independente post notícia card">
+          <h3><code>&lt;article&gt;</code> — conteúdo independente</h3>
+          <p>Unidade que faz sentido isolada (post, notícia, card de produto, comentário).</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;article&gt;
+  &lt;h2&gt;Post&lt;/h2&gt;
+  &lt;p&gt;…&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="aside barra lateral tangencial dicas anúncios">
+          <h3><code>&lt;aside&gt;</code> — conteúdo tangencial</h3>
+          <p>Informação complementar como box de dica, anúncio ou barra lateral.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;aside&gt;
+  &lt;h2&gt;Leia também&lt;/h2&gt;
+&lt;/aside&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="address contato autor organização">
+          <h3><code>&lt;address&gt;</code> — contato</h3>
+          <p>Informações de contato do autor ou organização.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;address&gt;
+  Contato: &lt;a href="mailto:contato@exemplo.com"&gt;contato@exemplo.com&lt;/a&gt;
+&lt;/address&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="h1 h2 h3 h4 h5 h6 títulos título hierarquia">
+          <h3><code>&lt;h1&gt;–&lt;h6&gt;</code> — títulos hierárquicos</h3>
+          <p>Marcam o outline lógico do documento e das seções.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;h1&gt;Artigo&lt;/h1&gt;
+&lt;h2&gt;Seção&lt;/h2&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Texto inline -->
+    <section id="inline" class="section" aria-labelledby="inline-title">
+      <header>
+        <h2 id="inline-title">Texto e ênfase (inline)</h2>
+        <p>Elementos que qualificam e dão significado a trechos de texto.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="p parágrafo texto">
+          <h3><code>&lt;p&gt;</code> — parágrafo</h3>
+          <p>Bloco de texto corrido.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;p&gt;Um parágrafo de texto.&lt;/p&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="a link âncora hiperlink">
+          <h3><code>&lt;a&gt;</code> — link</h3>
+          <p>Hiperlink para URLs ou âncoras internas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;a href="#sobre"&gt;Saiba mais&lt;/a&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="em ênfase entonação">
+          <h3><code>&lt;em&gt;</code> — ênfase</h3>
+          <p>Ênfase semântica; leitores de tela alteram entonação.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>Isso é &lt;em&gt;importante&lt;/em&gt;.</code></pre>
+        </article>
+        <article class="tag-card" data-index="strong forte prioridade">
+          <h3><code>&lt;strong&gt;</code> — ênfase forte</h3>
+          <p>Indica importância/alerta.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;strong&gt;Atenção:&lt;/strong&gt; prazo hoje.</code></pre>
+        </article>
+        <article class="tag-card" data-index="small secundário nota legal">
+          <h3><code>&lt;small&gt;</code> — nota secundária</h3>
+          <p>Comentários, notas, avisos legais.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;small&gt;© Direitos reservados.&lt;/small&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="cite obra título citação">
+          <h3><code>&lt;cite&gt;</code> — obra citada</h3>
+          <p>Título de obra (livro, filme) ou autoria em citação.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;cite&gt;Dom Casmurro&lt;/cite&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="q citação curta aspas">
+          <h3><code>&lt;q&gt;</code> — citação curta</h3>
+          <p>Insere aspas semânticas para trechos curtos.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>Ela disse: &lt;q&gt;vamos lá&lt;/q&gt;.</code></pre>
+        </article>
+        <article class="tag-card" data-index="blockquote citação em bloco">
+          <h3><code>&lt;blockquote&gt;</code> — citação em bloco</h3>
+          <p>Citação longa; pode incluir <code>&lt;cite&gt;</code>.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;blockquote&gt;
+  &lt;p&gt;Trecho citado…&lt;/p&gt;
+  &lt;cite&gt;Autor&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="abbr abreviação sigla tooltip">
+          <h3><code>&lt;abbr&gt;</code> — abreviação</h3>
+          <p>Expande siglas via atributo <code>title</code>.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="dfn definição termo">
+          <h3><code>&lt;dfn&gt;</code> — termo definido</h3>
+          <p>Marca o termo que está sendo definido.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dfn&gt;API&lt;/dfn&gt;: interface…</code></pre>
+        </article>
+        <article class="tag-card" data-index="time data hora legível máquina">
+          <h3><code>&lt;time&gt;</code> — data/hora</h3>
+          <p>Data/hora com atributo <code>datetime</code> legível por máquina.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;time datetime="2025-09-22"&gt;22/09/2025&lt;/time&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="mark realce highlight">
+          <h3><code>&lt;mark&gt;</code> — realce</h3>
+          <p>Destaca texto relevante em contexto.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>Resultado: &lt;mark&gt;aprovado&lt;/mark&gt;.</code></pre>
+        </article>
+        <article class="tag-card" data-index="b destaque não semântico">
+          <h3><code>&lt;b&gt;</code> — destaque não semântico</h3>
+          <p>Para palavras‑chave/lead; use <code>&lt;strong&gt;</code> para importância.</p>
+        </article>
+        <article class="tag-card" data-index="i voz alternativa estrangeirismo">
+          <h3><code>&lt;i&gt;</code> — voz alternativa</h3>
+          <p>Termos técnicos, estrangeirismos, pensamentos.</p>
+        </article>
+        <article class="tag-card" data-index="u sublinhado anotação ortográfica">
+          <h3><code>&lt;u&gt;</code> — anotação</h3>
+          <p>Não use apenas como enfeite; pode indicar erro ortográfico, nomes próprios em certos idiomas.</p>
+        </article>
+        <article class="tag-card" data-index="s inválido preço antigo">
+          <h3><code>&lt;s&gt;</code> — não mais válido</h3>
+          <p>Conteúdo obsoleto/valor anterior.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;s&gt;R$ 100&lt;/s&gt; R$ 80</code></pre>
+        </article>
+        <article class="tag-card" data-index="sub subscrito fórmula">
+          <h3><code>&lt;sub&gt;</code> — subscrito</h3>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+        </article>
+        <article class="tag-card" data-index="sup sobrescrito expoente">
+          <h3><code>&lt;sup&gt;</code> — sobrescrito</h3>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>x&lt;sup&gt;2&lt;/sup&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="wbr quebra opcional palavra longa">
+          <h3><code>&lt;wbr&gt;</code> — quebra opcional</h3>
+          <p>Inserir ponto de quebra em palavras longas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Código & dados -->
+    <section id="codigo" class="section" aria-labelledby="codigo-title">
+      <header>
+        <h2 id="codigo-title">Código, dados e saída</h2>
+        <p>Marcam trechos de código, entrada/saída e valores de dados.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="code código inline">
+          <h3><code>&lt;code&gt;</code></h3>
+          <p>Trecho de código.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>Use &lt;code&gt;display: grid;&lt;/code&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="pre pré formatado">
+          <h3><code>&lt;pre&gt;</code></h3>
+          <p>Preserva espaços e quebras de linha.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;pre&gt;linha 1
+linha 2&lt;/pre&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="samp saída programa">
+          <h3><code>&lt;samp&gt;</code></h3>
+          <p>Saída de programa.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;samp&gt;404 Not Found&lt;/samp&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="kbd teclado entrada usuário">
+          <h3><code>&lt;kbd&gt;</code></h3>
+          <p>Entrada do usuário/teclas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>Pressione &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="var variável matemática">
+          <h3><code>&lt;var&gt;</code></h3>
+          <p>Representa uma variável.</p>
+        </article>
+        <article class="tag-card" data-index="data valor dados machine-readable">
+          <h3><code>&lt;data&gt;</code></h3>
+          <p>Associa texto legível a um valor de dados.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;data value="123"&gt;Produto #123&lt;/data&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="output resultado cálculo formulário">
+          <h3><code>&lt;output&gt;</code></h3>
+          <p>Exibe resultado calculado.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;output id="total"&gt;0&lt;/output&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Listas -->
+    <section id="listas" class="section" aria-labelledby="listas-title">
+      <header>
+        <h2 id="listas-title">Listas e definições</h2>
+        <p>Estruturas para itens ordenados, não-ordenados e termos/descrições.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="ol ul li lista itens">
+          <h3><code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code></h3>
+          <p>Listas ordenadas e não ordenadas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;ol&gt;
+  &lt;li&gt;Passo 1&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="dl dt dd lista definições termo descrição">
+          <h3><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></h3>
+          <p>Termos e descrições.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dl&gt;
+  &lt;dt&gt;UX&lt;/dt&gt; &lt;dd&gt;Experiência do usuário&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mídia -->
+    <section id="midia" class="section" aria-labelledby="midia-title">
+      <header>
+        <h2 id="midia-title">Imagem, ilustração e mídia</h2>
+        <p>Imagens com texto alternativo significativo e legendas associadas.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="figure figcaption imagem legenda">
+          <h3><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></h3>
+          <p>Empacota mídia com legenda semântica.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;figure&gt;
+  &lt;img src="foto.jpg" alt="Paisagem de Brasília"&gt;
+  &lt;figcaption&gt;Ipê-amarelo no parque&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="img imagem alt">
+          <h3><code>&lt;img&gt;</code> — imagem</h3>
+          <p>Imagem embutida; sempre forneça <code>alt</code> descritivo.</p>
+        </article>
+        <article class="tag-card" data-index="picture source responsivo art direction">
+          <h3><code>&lt;picture&gt;</code> + <code>&lt;source&gt;</code></h3>
+          <p>Arte‑direção/resoluções diferentes por <code>media</code>.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;picture&gt;
+  &lt;source media="(min-width:800px)" srcset="hero-large.jpg"&gt;
+  &lt;img src="hero-small.jpg" alt="…"&gt;
+&lt;/picture&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="audio video track mídia legendas acessibilidade">
+          <h3><code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;track&gt;</code></h3>
+          <p>Mídia com controles; use <code>&lt;track kind="captions"&gt;</code> para legendas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;video controls&gt;
+  &lt;source src="clip.mp4" type="video/mp4"&gt;
+  &lt;track kind="captions" src="legendas.vtt" srclang="pt" label="Português"&gt;
+&lt;/video&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="map area mapa imagem hotspots">
+          <h3><code>&lt;map&gt;</code> + <code>&lt;area&gt;</code></h3>
+          <p>Mapa de imagem e áreas clicáveis.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tabelas -->
+    <section id="tabelas" class="section" aria-labelledby="tabelas-title">
+      <header>
+        <h2 id="tabelas-title">Tabelas de dados</h2>
+        <p>Estruture com <code>&lt;caption&gt;</code>, seções e cabeçalhos com <code>scope</code>.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="table caption thead tbody tfoot th td tr colgroup col">
+          <h3><code>&lt;table&gt;</code> (subestruturas)</h3>
+          <p><strong>caption</strong> (título), <strong>thead/tbody/tfoot</strong> (seções), <strong>tr</strong> (linha), <strong>th/td</strong> (células), <strong>colgroup/col</strong> (metadados/estilo).</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;table&gt;
+  &lt;caption&gt;Vendas 2025&lt;/caption&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Mês&lt;/th&gt;&lt;th scope="col"&gt;Total&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;R$ 10k&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Formulários -->
+    <section id="formularios" class="section" aria-labelledby="forms-title">
+      <header>
+        <h2 id="forms-title">Formulários e controles</h2>
+        <p>Prefira controles nativos, rótulos associados e tipos semânticos de <code>&lt;input&gt;</code>.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="form fieldset legend label">
+          <h3><code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code></h3>
+          <p>Estrutura e rótulos para acessibilidade.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;form&gt;
+  &lt;label for="email"&gt;E-mail&lt;/label&gt;
+  &lt;input id="email" type="email" required&gt;
+&lt;/form&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="input tipos email url date search checkbox radio file password number tel color range time">
+          <h3><code>&lt;input&gt;</code> (tipos semânticos)</h3>
+          <p>Use o tipo correto para validação, teclado móvel e acessibilidade.</p>
+        </article>
+        <article class="tag-card" data-index="textarea multiline">
+          <h3><code>&lt;textarea&gt;</code></h3>
+          <p>Campo de texto multilinha.</p>
+        </article>
+        <article class="tag-card" data-index="button submit reset">
+          <h3><code>&lt;button&gt;</code></h3>
+          <p>Botões com <code>type</code>: <code>submit</code>, <code>button</code>, <code>reset</code>.</p>
+        </article>
+        <article class="tag-card" data-index="select option optgroup datalist progress meter output">
+          <h3><code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code>, <code>&lt;output&gt;</code></h3>
+          <p>Listas de opções, sugestões, progresso e medição.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interatividade -->
+    <section id="interatividade" class="section" aria-labelledby="inter-title">
+      <header>
+        <h2 id="inter-title">Divulgação e modais nativos</h2>
+        <p>Componentes interativos sem dependências externas.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="details summary colapsar expansão faq">
+          <h3><code>&lt;details&gt;</code> + <code>&lt;summary&gt;</code></h3>
+          <p>Seções expansíveis nativas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;details&gt;
+  &lt;summary&gt;Perguntas frequentes&lt;/summary&gt;
+  &lt;p&gt;Resposta…&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="dialog modal showModal foco">
+          <h3><code>&lt;dialog&gt;</code></h3>
+          <p>Modal/diálogo; gerencie foco e tecla Esc.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dialog id="dlg"&gt;
+  &lt;p&gt;Olá!&lt;/p&gt;
+  &lt;form method="dialog"&gt;&lt;button&gt;Fechar&lt;/button&gt;&lt;/form&gt;
+&lt;/dialog&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Direção & i18n -->
+    <section id="direcao" class="section" aria-labelledby="dir-title">
+      <header>
+        <h2 id="dir-title">Direção de texto e internacionalização</h2>
+        <p>Controle bidi e anotações para idiomas asiáticos.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="ruby rt rp anotação ideogramas">
+          <h3><code>&lt;ruby&gt;</code>, <code>&lt;rt&gt;</code>, <code>&lt;rp&gt;</code></h3>
+          <p>Anotações ruby para leitura de ideogramas.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;ruby&gt;
+  漢 &lt;rt&gt;kan&lt;/rt&gt;
+&lt;/ruby&gt;</code></pre>
+        </article>
+        <article class="tag-card" data-index="bdi isolamento bidi nomes usuários">
+          <h3><code>&lt;bdi&gt;</code></h3>
+          <p>Isola direção de texto imprevisível (ex.: handles).</p>
+        </article>
+        <article class="tag-card" data-index="bdo direção forçada rtl ltr">
+          <h3><code>&lt;bdo&gt;</code></h3>
+          <p>Força direção <code>dir="rtl"</code> ou <code>dir="ltr"</code>.</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;bdo dir="rtl"&gt;abc&lt;/bdo&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Quebra temática -->
+    <section id="tematica" class="section" aria-labelledby="tem-title">
+      <header>
+        <h2 id="tem-title">Quebra temática</h2>
+        <p>Separação semântica entre blocos de conteúdo.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="hr quebra tema seção">
+          <h3><code>&lt;hr&gt;</code></h3>
+          <p>Indica transição temática (não é apenas uma “linha”).</p>
+          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;p&gt;Introdução…&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Conteúdo principal…&lt;/p&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Embutidos -->
+    <section id="embutidos" class="section" aria-labelledby="emb-title">
+      <header>
+        <h2 id="emb-title">Conteúdo embutido e integrado</h2>
+        <p>Inclusão de documentos e objetos externos.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="iframe documento externo título acessível">
+          <h3><code>&lt;iframe&gt;</code></h3>
+          <p>Incorpora conteúdo externo; forneça <code>title</code> descritivo.</p>
+        </article>
+        <article class="tag-card" data-index="embed object param plugin legado">
+          <h3><code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code></h3>
+          <p>Objetos/plug-ins. Prefira <code>&lt;video&gt;</code>/<code>&lt;audio&gt;</code> quando possível.</p>
+        </article>
+        <article class="tag-card" data-index="noscript fallback sem javascript">
+          <h3><code>&lt;noscript&gt;</code></h3>
+          <p>Conteúdo alternativo quando scripts estão desativados.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Metadados -->
+    <section id="metadados" class="section" aria-labelledby="meta-title">
+      <header>
+        <h2 id="meta-title">Metadados (elementos no &lt;head&gt;)</h2>
+        <p>Informações sobre o documento, SEO e relações com recursos.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="title título documento aba navegador">
+          <h3><code>&lt;title&gt;</code></h3>
+          <p>Título do documento (SEO e acessibilidade).</p>
+        </article>
+        <article class="tag-card" data-index="meta charset viewport description theme-color">
+          <h3><code>&lt;meta&gt;</code></h3>
+          <p>Metadados como <code>charset</code>, <code>viewport</code>, <code>description</code>, etc.</p>
+        </article>
+        <article class="tag-card" data-index="link css favicon preconnect canonical">
+          <h3><code>&lt;link&gt;</code></h3>
+          <p>Relações com recursos: folhas de estilo, favicons, canonical…</p>
+        </article>
+        <article class="tag-card" data-index="base urls relativas base href">
+          <h3><code>&lt;base&gt;</code></h3>
+          <p>Define base para URLs relativas (use com cautela).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Não semânticos -->
+    <section id="nao-semanticos" class="section" aria-labelledby="nao-title">
+      <header>
+        <h2 id="nao-title">Elementos <em>não</em> semânticos (para contraste)</h2>
+        <p>Use com parcimônia quando não houver alternativa semântica adequada.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card" data-index="div container genérico layout">
+          <h3><code>&lt;div&gt;</code></h3>
+          <p>Contêiner genérico sem significado.</p>
+        </article>
+        <article class="tag-card" data-index="span inline genérico">
+          <h3><code>&lt;span&gt;</code></h3>
+          <p>Inline genérico sem significado.</p>
+        </article>
+        <article class="tag-card" data-index="canvas desenho bitmap acessível com fallback">
+          <h3><code>&lt;canvas&gt;</code></h3>
+          <p>Área de desenho. Forneça alternativas acessíveis no conteúdo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- A–Z (resumo) -->
+    <section id="az" class="section" aria-labelledby="az-title">
+      <header>
+        <h2 id="az-title">Referência A–Z (1 linha)</h2>
+        <p>Resumo em 1 linha para consulta imediata.</p>
+      </header>
+      <div class="az" role="list">
+        <div class="az-item" data-index="abbr abreviação"><code>&lt;abbr&gt;</code><span>abreviação (exibe expansão via <code>title</code>)</span></div>
+        <div class="az-item" data-index="address contato"><code>&lt;address&gt;</code><span>informações de contato</span></div>
+        <div class="az-item" data-index="article independente"><code>&lt;article&gt;</code><span>unidade independente (post, notícia)</span></div>
+        <div class="az-item" data-index="aside tangencial"><code>&lt;aside&gt;</code><span>conteúdo tangencial/metro</span></div>
+        <div class="az-item" data-index="audio mídia"><code>&lt;audio&gt;</code><span>áudio com controles</span></div>
+        <div class="az-item" data-index="b destaque"><code>&lt;b&gt;</code><span>destaque não semântico</span></div>
+        <div class="az-item" data-index="bdi bidi"><code>&lt;bdi&gt;</code><span>isola direção de texto</span></div>
+        <div class="az-item" data-index="bdo direção"><code>&lt;bdo&gt;</code><span>força direção de texto</span></div>
+        <div class="az-item" data-index="blockquote citação"><code>&lt;blockquote&gt;</code><span>citação em bloco</span></div>
+        <div class="az-item" data-index="button botão"><code>&lt;button&gt;</code><span>botões nativos</span></div>
+        <div class="az-item" data-index="caption título tabela"><code>&lt;caption&gt;</code><span>título de tabela</span></div>
+        <div class="az-item" data-index="cite obra"><code>&lt;cite&gt;</code><span>título de obra / referência</span></div>
+        <div class="az-item" data-index="code código"><code>&lt;code&gt;</code><span>trecho de código</span></div>
+        <div class="az-item" data-index="data"><code>&lt;data&gt;</code><span>valor de dados associado a texto</span></div>
+        <div class="az-item" data-index="datalist sugestões"><code>&lt;datalist&gt;</code><span>lista de sugestões para <code>&lt;input&gt;</code></span></div>
+        <div class="az-item" data-index="dd descrição"><code>&lt;dd&gt;</code><span>descrição de termo</span></div>
+        <div class="az-item" data-index="del removido"><code>&lt;del&gt;</code><span>conteúdo removido</span></div>
+        <div class="az-item" data-index="details divulgação"><code>&lt;details&gt;</code><span>seção expansível</span></div>
+        <div class="az-item" data-index="dfn definição"><code>&lt;dfn&gt;</code><span>termo definido</span></div>
+        <div class="az-item" data-index="dialog modal"><code>&lt;dialog&gt;</code><span>diálogo/modal</span></div>
+        <div class="az-item" data-index="dl lista definições"><code>&lt;dl&gt;</code><span>lista de definições</span></div>
+        <div class="az-item" data-index="dt termo"><code>&lt;dt&gt;</code><span>termo da definição</span></div>
+        <div class="az-item" data-index="em ênfase"><code>&lt;em&gt;</code><span>ênfase semântica</span></div>
+        <div class="az-item" data-index="figcaption"><code>&lt;figcaption&gt;</code><span>legenda de figura</span></div>
+        <div class="az-item" data-index="figure figura"><code>&lt;figure&gt;</code><span>mídia com legenda</span></div>
+        <div class="az-item" data-index="footer rodapé"><code>&lt;footer&gt;</code><span>rodapé</span></div>
+        <div class="az-item" data-index="form formulário"><code>&lt;form&gt;</code><span>contêiner de formulário</span></div>
+        <div class="az-item" data-index="h1 h2 h3 h4 h5 h6 títulos"><code>&lt;h1&gt;–&lt;h6&gt;</code><span>títulos</span></div>
+        <div class="az-item" data-index="hgroup subtítulo"><code>&lt;hgroup&gt;</code><span>agrupar título/subtítulo (uso raro)</span></div>
+        <div class="az-item" data-index="header cabeçalho"><code>&lt;header&gt;</code><span>cabeçalho</span></div>
+        <div class="az-item" data-index="hr quebra temática"><code>&lt;hr&gt;</code><span>quebra temática</span></div>
+        <div class="az-item" data-index="i voz alternativa"><code>&lt;i&gt;</code><span>voz alternativa</span></div>
+        <div class="az-item" data-index="iframe"><code>&lt;iframe&gt;</code><span>incorpora documento</span></div>
+        <div class="az-item" data-index="img imagem"><code>&lt;img&gt;</code><span>imagem embutida</span></div>
+        <div class="az-item" data-index="input"><code>&lt;input&gt;</code><span>campo de formulário (vários tipos)</span></div>
+        <div class="az-item" data-index="ins inserido"><code>&lt;ins&gt;</code><span>conteúdo inserido</span></div>
+        <div class="az-item" data-index="kbd teclado"><code>&lt;kbd&gt;</code><span>entrada do usuário</span></div>
+        <div class="az-item" data-index="label rótulo"><code>&lt;label&gt;</code><span>rótulo associado</span></div>
+        <div class="az-item" data-index="legend grupo"><code>&lt;legend&gt;</code><span>título de <code>&lt;fieldset&gt;</code></span></div>
+        <div class="az-item" data-index="li item"><code>&lt;li&gt;</code><span>item de lista</span></div>
+        <div class="az-item" data-index="link recurso"><code>&lt;link&gt;</code><span>relação com recurso (CSS, ícones)</span></div>
+        <div class="az-item" data-index="main conteúdo principal"><code>&lt;main&gt;</code><span>conteúdo principal</span></div>
+        <div class="az-item" data-index="mark realce"><code>&lt;mark&gt;</code><span>realce contextual</span></div>
+        <div class="az-item" data-index="meta metadados"><code>&lt;meta&gt;</code><span>metadados do documento</span></div>
+        <div class="az-item" data-index="meter medida"><code>&lt;meter&gt;</code><span>medida escalar</span></div>
+        <div class="az-item" data-index="nav navegação"><code>&lt;nav&gt;</code><span>navegação</span></div>
+        <div class="az-item" data-index="noscript fallback"><code>&lt;noscript&gt;</code><span>fallback sem script</span></div>
+        <div class="az-item" data-index="object plugin"><code>&lt;object&gt;</code><span>objeto/plugin embutido</span></div>
+        <div class="az-item" data-index="ol lista ordenada"><code>&lt;ol&gt;</code><span>lista ordenada</span></div>
+        <div class="az-item" data-index="optgroup opções agrupadas"><code>&lt;optgroup&gt;</code><span>grupo de opções</span></div>
+        <div class="az-item" data-index="option opção"><code>&lt;option&gt;</code><span>opção de lista</span></div>
+        <div class="az-item" data-index="output resultado"><code>&lt;output&gt;</code><span>resultado de cálculo</span></div>
+        <div class="az-item" data-index="p parágrafo"><code>&lt;p&gt;</code><span>parágrafo</span></div>
+        <div class="az-item" data-index="picture imagem responsiva"><code>&lt;picture&gt;</code><span>imagem responsiva</span></div>
+        <div class="az-item" data-index="pre pré-formatado"><code>&lt;pre&gt;</code><span>texto pré-formatado</span></div>
+        <div class="az-item" data-index="progress progresso"><code>&lt;progress&gt;</code><span>barra de progresso</span></div>
+        <div class="az-item" data-index="q citação curta"><code>&lt;q&gt;</code><span>citação inline</span></div>
+        <div class="az-item" data-index="ruby anotação"><code>&lt;ruby&gt;</code><span>anotação ruby</span></div>
+        <div class="az-item" data-index="rt ruby texto"><code>&lt;rt&gt;</code><span>texto ruby</span></div>
+        <div class="az-item" data-index="rp parênteses ruby"><code>&lt;rp&gt;</code><span>parênteses de fallback</span></div>
+        <div class="az-item" data-index="s riscado"><code>&lt;s&gt;</code><span>texto obsoleto</span></div>
+        <div class="az-item" data-index="samp saída"><code>&lt;samp&gt;</code><span>saída de programa</span></div>
+        <div class="az-item" data-index="script"><code>&lt;script&gt;</code><span>código JavaScript</span></div>
+        <div class="az-item" data-index="section seção"><code>&lt;section&gt;</code><span>seção temática</span></div>
+        <div class="az-item" data-index="select lista seleção"><code>&lt;select&gt;</code><span>lista de seleção</span></div>
+        <div class="az-item" data-index="small texto pequeno"><code>&lt;small&gt;</code><span>texto secundário</span></div>
+        <div class="az-item" data-index="source mídia"><code>&lt;source&gt;</code><span>fonte de mídia</span></div>
+        <div class="az-item" data-index="span inline"><code>&lt;span&gt;</code><span>inline genérico</span></div>
+        <div class="az-item" data-index="strong ênfase forte"><code>&lt;strong&gt;</code><span>ênfase forte</span></div>
+        <div class="az-item" data-index="sub subscrito"><code>&lt;sub&gt;</code><span>subscrito</span></div>
+        <div class="az-item" data-index="summary resumo"><code>&lt;summary&gt;</code><span>resumo de details</span></div>
+        <div class="az-item" data-index="sup sobrescrito"><code>&lt;sup&gt;</code><span>sobrescrito</span></div>
+        <div class="az-item" data-index="table tabela"><code>&lt;table&gt;</code><span>tabela de dados</span></div>
+        <div class="az-item" data-index="tbody corpo tabela"><code>&lt;tbody&gt;</code><span>corpo da tabela</span></div>
+        <div class="az-item" data-index="td célula dados"><code>&lt;td&gt;</code><span>célula de dados</span></div>
+        <div class="az-item" data-index="textarea texto multilinha"><code>&lt;textarea&gt;</code><span>campo multilinha</span></div>
+        <div class="az-item" data-index="tfoot rodapé tabela"><code>&lt;tfoot&gt;</code><span>rodapé da tabela</span></div>
+        <div class="az-item" data-index="th célula cabeçalho"><code>&lt;th&gt;</code><span>célula de cabeçalho</span></div>
+        <div class="az-item" data-index="thead cabeçalho tabela"><code>&lt;thead&gt;</code><span>cabeçalho da tabela</span></div>
+        <div class="az-item" data-index="time data hora"><code>&lt;time&gt;</code><span>data/hora</span></div>
+        <div class="az-item" data-index="title título"><code>&lt;title&gt;</code><span>título do documento</span></div>
+        <div class="az-item" data-index="tr linha tabela"><code>&lt;tr&gt;</code><span>linha da tabela</span></div>
+        <div class="az-item" data-index="track legenda"><code>&lt;track&gt;</code><span>faixa de legenda</span></div>
+        <div class="az-item" data-index="u sublinhado"><code>&lt;u&gt;</code><span>anotação sublinhada</span></div>
+        <div class="az-item" data-index="ul lista não ordenada"><code>&lt;ul&gt;</code><span>lista não ordenada</span></div>
+        <div class="az-item" data-index="var variável"><code>&lt;var&gt;</code><span>variável</span></div>
+        <div class="az-item" data-index="video vídeo"><code>&lt;video&gt;</code><span>vídeo com controles</span></div>
+        <div class="az-item" data-index="wbr quebra opcional"><code>&lt;wbr&gt;</code><span>quebra de linha opcional</span></div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section id="checklist" class="section" aria-labelledby="checklist-title">
+      <header>
+        <h2 id="checklist-title">Checklist de acessibilidade e semântica</h2>
+        <p>Pontos essenciais para verificar em qualquer documento HTML5.</p>
+      </header>
+      <div class="grid">
+        <article class="tag-card">
+          <h3>🎯 Estrutura semântica</h3>
+          <ul style="margin: 8px 0; padding-left: 20px;">
+            <li>Usa landmarks apropriados (<code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>)</li>
+            <li>Hierarquia de títulos lógica (H1 → H2 → H3...)</li>
+            <li>Elementos semânticos em vez de <code>&lt;div&gt;</code> genérico</li>
+            <li>Listas para conteúdo em lista</li>
+          </ul>
+        </article>
+
+        <article class="tag-card">
+          <h3>♿ Acessibilidade</h3>
+          <ul style="margin: 8px 0; padding-left: 20px;">
+            <li>Textos alternativos em imagens (<code>alt=""</code>)</li>
+            <li>Rótulos associados em formulários (<code>&lt;label for=""&gt;</code>)</li>
+            <li>Contraste adequado de cores</li>
+            <li>Navegação por teclado funcional</li>
+            <li>Links com texto descritivo</li>
+          </ul>
+        </article>
+
+        <article class="tag-card">
+          <h3>🔧 Tecnologia assistiva</h3>
+          <ul style="margin: 8px 0; padding-left: 20px;">
+            <li>Atributo <code>lang</code> no elemento raiz</li>
+            <li>ARIA landmarks quando necessário</li>
+            <li>Estados dinâmicos com <code>aria-live</code></li>
+            <li>Skip links para conteúdo principal</li>
+          </ul>
+        </article>
+
+        <article class="tag-card">
+          <h3>📱 Performance e UX</h3>
+          <ul style="margin: 8px 0; padding-left: 20px;">
+            <li>Meta viewport configurado</li>
+            <li>Imagens responsivas (<code>&lt;picture&gt;</code>, <code>srcset</code>)</li>
+            <li>Lazy loading quando apropriado</li>
+            <li>Indicadores de progresso em operações longas</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>HTML5 Semântico — Guia Rápido</strong> •
+        Desenvolvido com ❤️ para a comunidade •
+        <a href="https://github.com/benearagao" target="_blank" rel="noopener noreferrer">
+          @benearagao
+        </a>
+      </p>
+      <p>
+        <small>
+          Este guia segue as especificações da W3C e boas práticas de acessibilidade.
+          Última atualização: <time datetime="2024-12-10">dezembro de 2024</time>
+        </small>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
