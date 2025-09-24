@@ -377,10 +377,11 @@ pre code {
   font-weight: 700;
 }
 
-.az-item h4 {
+.az-item strong {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
+  display: block;
 }
 
 /* ===== Footer ===== */
