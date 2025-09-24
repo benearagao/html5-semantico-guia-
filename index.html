@@ -25,6 +25,7 @@
         <span class="badge">consulta prática</span>
       </div>
       <nav class="chips-nav" aria-label="Atalhos de seção">
+        <a class="chip" href="#why-title"><span class="dot"></span>Por que semântica?</a>
         <a class="chip" href="#landmarks"><span class="dot"></span>Landmarks</a>
         <a class="chip" href="#inline"><span class="dot"></span>Texto (inline)</a>
         <a class="chip" href="#codigo"><span class="dot"></span>Código & dados</a>
@@ -55,6 +56,25 @@
           <input id="busca" type="search" placeholder="Buscar: article, time, figure…" aria-describedby="contagem" />
         </div>
         <div class="counter" id="contagem" aria-live="polite">Mostrando todas as seções</div>
+      </div>
+    </section>
+
+    <!-- Por que semântica importa -->
+    <section class="intro" aria-labelledby="why-title">
+      <h2 id="why-title">🌐 Por que a semântica importa?</h2>
+      <div class="grid" style="grid-template-columns: 1fr;">
+        <article class="tag-card">
+          <h3>💡 Web Semântico</h3>
+          <p><strong>Uma web semântica permite que dados sejam compartilhados e reutilizados entre aplicações, empresas e comunidades.</strong> Elementos HTML5 semânticos criam significado não apenas para desenvolvedores, mas para:</p>
+          <ul style="margin: 12px 0; padding-left: 20px; color: var(--muted);">
+            <li><strong>🤖 Motores de busca</strong> — melhor indexação e SEO</li>
+            <li><strong>♿ Leitores de tela</strong> — navegação assistiva eficiente</li>
+            <li><strong>📱 Dispositivos móveis</strong> — interpretação contextual</li>
+            <li><strong>🔗 APIs</strong> — extração automática de conteúdo</li>
+            <li><strong>🧠 IA</strong> — compreensão de estrutura e contexto</li>
+          </ul>
+          <p><small>Ao contrário de elementos genéricos como <code>&lt;div&gt;</code>, elementos semânticos comunicam <em>propósito</em> e <em>significado</em>.</small></p>
+        </article>
       </div>
     </section>
 
@@ -91,9 +111,23 @@
 
         <article class="tag-card" data-index="nav navegação menu breadcrumb paginação landmark">
           <h3><code>&lt;nav&gt;</code> — navegação</h3>
+          <div class="meta"><span class="pill">múltiplas por página</span><span class="pill">rotular com aria-label</span></div>
           <p>Bloco de links principais ou secundários (menus, breadcrumbs, paginação).</p>
-          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;nav aria-label="principal"&gt;
-  &lt;ul&gt;&lt;li&gt;&lt;a href="/"&gt;Início&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;!-- Navegação principal --&gt;
+&lt;nav aria-label="Principal"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/" aria-current="page"&gt;Início&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Breadcrumbs --&gt;
+&lt;nav aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+    &lt;li aria-current="page"&gt;Post atual&lt;/li&gt;
+  &lt;/ol&gt;
 &lt;/nav&gt;</code></pre>
         </article>
 
@@ -136,6 +170,41 @@
           <p>Marcam o outline lógico do documento e das seções.</p>
           <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;h1&gt;Artigo&lt;/h1&gt;
 &lt;h2&gt;Seção&lt;/h2&gt;</code></pre>
+        </article>
+
+        <article class="tag-card" data-index="aninhamento semântico estrutura completa exemplo">
+          <h3>🏗️ Exemplo de estrutura semântica completa</h3>
+          <div class="meta"><span class="pill">exemplo prático</span><span class="pill">aninhamento</span></div>
+          <p>Como combinar elementos semânticos para criar uma estrutura robusta.</p>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;main&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Blog Tech&lt;/h1&gt;
+    &lt;nav aria-label="Principal"&gt;
+      &lt;ul&gt;&lt;li&gt;&lt;a href="/posts"&gt;Posts&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Posts Recentes&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;header&gt;
+        &lt;h3&gt;HTML5 Semântico&lt;/h3&gt;
+        &lt;time datetime="2025-01-15"&gt;15 de janeiro&lt;/time&gt;
+      &lt;/header&gt;
+      &lt;p&gt;Conteúdo do post...&lt;/p&gt;
+      &lt;footer&gt;
+        &lt;address&gt;Por &lt;a href="/autor"&gt;João Silva&lt;/a&gt;&lt;/address&gt;
+      &lt;/footer&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;aside&gt;
+    &lt;h2&gt;Links Úteis&lt;/h2&gt;
+    &lt;nav aria-label="Secundária"&gt;
+      &lt;ul&gt;&lt;li&gt;&lt;a href="/recursos"&gt;Recursos&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;</code></pre>
         </article>
       </div>
     </section>
