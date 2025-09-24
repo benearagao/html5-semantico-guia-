@@ -7,8 +7,8 @@
   --bg: #0b0c0f;
   --surface: #111318;
   --surface-2: #171922;
-  --fg: #e9edf1;
-  --muted: #b5bdc5;
+  --fg: #ffffff; /* Increased contrast for better WCAG compliance */
+  --muted: #cbd5e1; /* Improved contrast from #b5bdc5 */
   --accent: #7dd3fc; /* azul-ciano */
   --accent-2: #a78bfa; /* violeta */
   --ok: #34d399;
@@ -27,12 +27,12 @@
     --bg: #f7f7fb;
     --surface: #ffffff;
     --surface-2: #f2f4f8;
-    --fg: #0f172a;
-    --muted: #475569;
+    --fg: #000000; /* Maximum contrast for light mode */
+    --muted: #374151; /* Better contrast from #475569 */
     --accent: #0284c7;
     --accent-2: #6d28d9;
-    --code-bg: #0b1220;
-    --code-border: #e6e8ee;
+    --code-bg: #f1f5f9;
+    --code-border: #d1d5db;
     --chip: #e9eef6;
   }
 }
@@ -268,8 +268,9 @@ section.section {
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 999px;
-  border: 1px dashed color-mix(in oklab, var(--fg), transparent 80%);
-  color: var(--muted);
+  border: 1px dashed color-mix(in oklab, var(--fg), transparent 70%);
+  color: var(--fg);
+  background: color-mix(in oklab, var(--fg), transparent 95%);
 }
 
 .tag-card p {
@@ -294,6 +295,34 @@ pre {
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: .92rem;
+  background: color-mix(in oklab, var(--accent), transparent 90%);
+  color: var(--fg);
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid color-mix(in oklab, var(--accent), transparent 70%);
+}
+
+/* Reset styles for code inside pre blocks */
+pre code {
+  background: transparent;
+  color: #e9ecf5;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Light mode adjustments for code */
+@media (prefers-color-scheme: light) {
+  code {
+    background: color-mix(in oklab, var(--accent), transparent 85%);
+    color: var(--fg);
+    border-color: color-mix(in oklab, var(--accent), transparent 60%);
+  }
+
+  pre code {
+    background: transparent;
+    color: #1e293b; /* Dark text for light pre background */
+  }
 }
 
 .copy-btn {
@@ -362,7 +391,20 @@ footer.site-footer {
 
 /* ===== Focus styles ===== */
 :where(a, button, input, summary):focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
   border-radius: 8px;
+}
+
+/* Enhanced focus for interactive elements */
+.chip:focus-visible,
+.copy-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Ensure code elements have sufficient contrast in all states */
+code:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
