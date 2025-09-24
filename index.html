@@ -50,7 +50,7 @@
       <p>Pesquise por uma tag ou percorra as seções. Cada cartão traz significado, quando usar e um exemplo mínimo. O guia reforça acessibilidade e boas práticas.</p>
       <div class="toolbar">
         <div class="search">
-          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.2-4.2M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" role="img" aria-label="Ícone de busca"><path d="M21 21l-4.2-4.2M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <label for="busca" class="sr-only">Buscar tags</label>
           <input id="busca" type="search" placeholder="Buscar: article, time, figure…" aria-describedby="contagem" />
         </div>
@@ -69,7 +69,7 @@
           <h3><code>&lt;main&gt;</code> — conteúdo principal</h3>
           <div class="meta"><span class="pill">1× por página</span><span class="pill">marco de navegação</span></div>
           <p>Contém o conteúdo primário do documento. Não inclui cabeçalhos, barras laterais ou rodapés.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;main&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;main&gt;
   &lt;h1&gt;Notícias&lt;/h1&gt;
   &lt;!-- conteúdo principal --&gt;
 &lt;/main&gt;</code></pre>
@@ -78,7 +78,7 @@
         <article class="tag-card" data-index="header cabeçalho seção landmark">
           <h3><code>&lt;header&gt;</code> — cabeçalho</h3>
           <p>Introdução de página ou seção; pode conter logotipo, título e navegação local.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;header&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;header&gt;
   &lt;h1&gt;Meu Site&lt;/h1&gt;
 &lt;/header&gt;</code></pre>
         </article>
@@ -86,13 +86,13 @@
         <article class="tag-card" data-index="footer rodapé seção landmark">
           <h3><code>&lt;footer&gt;</code> — rodapé</h3>
           <p>Informações de autoria, direitos, links contextuais, contatos.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;footer&gt;© 2025 — Bené Aragão&lt;/footer&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;footer&gt;© 2025 — Bené Aragão&lt;/footer&gt;</code></pre>
         </article>
 
         <article class="tag-card" data-index="nav navegação menu breadcrumb paginação landmark">
           <h3><code>&lt;nav&gt;</code> — navegação</h3>
           <p>Bloco de links principais ou secundários (menus, breadcrumbs, paginação).</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;nav aria-label="principal"&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;nav aria-label="principal"&gt;
   &lt;ul&gt;&lt;li&gt;&lt;a href="/"&gt;Início&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
         </article>
@@ -100,7 +100,7 @@
         <article class="tag-card" data-index="section seção temática título grouping">
           <h3><code>&lt;section&gt;</code> — seção temática</h3>
           <p>Agrupa conteúdo relacionado que exige um <em>título próprio</em>.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;section&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;section&gt;
   &lt;h2&gt;Serviços&lt;/h2&gt;
   &lt;p&gt;Descrição…&lt;/p&gt;
 &lt;/section&gt;</code></pre>
@@ -109,7 +109,7 @@
         <article class="tag-card" data-index="article artigo independente post notícia card">
           <h3><code>&lt;article&gt;</code> — conteúdo independente</h3>
           <p>Unidade que faz sentido isolada (post, notícia, card de produto, comentário).</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;article&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;article&gt;
   &lt;h2&gt;Post&lt;/h2&gt;
   &lt;p&gt;…&lt;/p&gt;
 &lt;/article&gt;</code></pre>
@@ -118,7 +118,7 @@
         <article class="tag-card" data-index="aside barra lateral tangencial dicas anúncios">
           <h3><code>&lt;aside&gt;</code> — conteúdo tangencial</h3>
           <p>Informação complementar como box de dica, anúncio ou barra lateral.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;aside&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;aside&gt;
   &lt;h2&gt;Leia também&lt;/h2&gt;
 &lt;/aside&gt;</code></pre>
         </article>
@@ -126,7 +126,7 @@
         <article class="tag-card" data-index="address contato autor organização">
           <h3><code>&lt;address&gt;</code> — contato</h3>
           <p>Informações de contato do autor ou organização.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;address&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;address&gt;
   Contato: &lt;a href="mailto:contato@exemplo.com"&gt;contato@exemplo.com&lt;/a&gt;
 &lt;/address&gt;</code></pre>
         </article>
@@ -134,7 +134,7 @@
         <article class="tag-card" data-index="h1 h2 h3 h4 h5 h6 títulos título hierarquia">
           <h3><code>&lt;h1&gt;–&lt;h6&gt;</code> — títulos hierárquicos</h3>
           <p>Marcam o outline lógico do documento e das seções.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;h1&gt;Artigo&lt;/h1&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;h1&gt;Artigo&lt;/h1&gt;
 &lt;h2&gt;Seção&lt;/h2&gt;</code></pre>
         </article>
       </div>
@@ -150,42 +150,42 @@
         <article class="tag-card" data-index="p parágrafo texto">
           <h3><code>&lt;p&gt;</code> — parágrafo</h3>
           <p>Bloco de texto corrido.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;p&gt;Um parágrafo de texto.&lt;/p&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;p&gt;Um parágrafo de texto.&lt;/p&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="a link âncora hiperlink">
           <h3><code>&lt;a&gt;</code> — link</h3>
           <p>Hiperlink para URLs ou âncoras internas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;a href="#sobre"&gt;Saiba mais&lt;/a&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;a href="#sobre"&gt;Saiba mais&lt;/a&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="em ênfase entonação">
           <h3><code>&lt;em&gt;</code> — ênfase</h3>
           <p>Ênfase semântica; leitores de tela alteram entonação.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>Isso é &lt;em&gt;importante&lt;/em&gt;.</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>Isso é &lt;em&gt;importante&lt;/em&gt;.</code></pre>
         </article>
         <article class="tag-card" data-index="strong forte prioridade">
           <h3><code>&lt;strong&gt;</code> — ênfase forte</h3>
           <p>Indica importância/alerta.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;strong&gt;Atenção:&lt;/strong&gt; prazo hoje.</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;strong&gt;Atenção:&lt;/strong&gt; prazo hoje.</code></pre>
         </article>
         <article class="tag-card" data-index="small secundário nota legal">
           <h3><code>&lt;small&gt;</code> — nota secundária</h3>
           <p>Comentários, notas, avisos legais.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;small&gt;© Direitos reservados.&lt;/small&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;small&gt;© Direitos reservados.&lt;/small&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="cite obra título citação">
           <h3><code>&lt;cite&gt;</code> — obra citada</h3>
           <p>Título de obra (livro, filme) ou autoria em citação.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;cite&gt;Dom Casmurro&lt;/cite&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;cite&gt;Dom Casmurro&lt;/cite&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="q citação curta aspas">
           <h3><code>&lt;q&gt;</code> — citação curta</h3>
           <p>Insere aspas semânticas para trechos curtos.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>Ela disse: &lt;q&gt;vamos lá&lt;/q&gt;.</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>Ela disse: &lt;q&gt;vamos lá&lt;/q&gt;.</code></pre>
         </article>
         <article class="tag-card" data-index="blockquote citação em bloco">
           <h3><code>&lt;blockquote&gt;</code> — citação em bloco</h3>
           <p>Citação longa; pode incluir <code>&lt;cite&gt;</code>.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;blockquote&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;blockquote&gt;
   &lt;p&gt;Trecho citado…&lt;/p&gt;
   &lt;cite&gt;Autor&lt;/cite&gt;
 &lt;/blockquote&gt;</code></pre>
@@ -193,22 +193,22 @@
         <article class="tag-card" data-index="abbr abreviação sigla tooltip">
           <h3><code>&lt;abbr&gt;</code> — abreviação</h3>
           <p>Expande siglas via atributo <code>title</code>.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="dfn definição termo">
           <h3><code>&lt;dfn&gt;</code> — termo definido</h3>
           <p>Marca o termo que está sendo definido.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dfn&gt;API&lt;/dfn&gt;: interface…</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;dfn&gt;API&lt;/dfn&gt;: interface…</code></pre>
         </article>
         <article class="tag-card" data-index="time data hora legível máquina">
           <h3><code>&lt;time&gt;</code> — data/hora</h3>
           <p>Data/hora com atributo <code>datetime</code> legível por máquina.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;time datetime="2025-09-22"&gt;22/09/2025&lt;/time&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;time datetime="2025-09-22"&gt;22/09/2025&lt;/time&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="mark realce highlight">
           <h3><code>&lt;mark&gt;</code> — realce</h3>
           <p>Destaca texto relevante em contexto.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>Resultado: &lt;mark&gt;aprovado&lt;/mark&gt;.</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>Resultado: &lt;mark&gt;aprovado&lt;/mark&gt;.</code></pre>
         </article>
         <article class="tag-card" data-index="b destaque não semântico">
           <h3><code>&lt;b&gt;</code> — destaque não semântico</h3>
@@ -225,15 +225,15 @@
         <article class="tag-card" data-index="s inválido preço antigo">
           <h3><code>&lt;s&gt;</code> — não mais válido</h3>
           <p>Conteúdo obsoleto/valor anterior.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;s&gt;R$ 100&lt;/s&gt; R$ 80</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;s&gt;R$ 100&lt;/s&gt; R$ 80</code></pre>
         </article>
         <article class="tag-card" data-index="sub subscrito fórmula">
           <h3><code>&lt;sub&gt;</code> — subscrito</h3>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
         </article>
         <article class="tag-card" data-index="sup sobrescrito expoente">
           <h3><code>&lt;sup&gt;</code> — sobrescrito</h3>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>x&lt;sup&gt;2&lt;/sup&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>x&lt;sup&gt;2&lt;/sup&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="wbr quebra opcional palavra longa">
           <h3><code>&lt;wbr&gt;</code> — quebra opcional</h3>
@@ -252,23 +252,23 @@
         <article class="tag-card" data-index="code código inline">
           <h3><code>&lt;code&gt;</code></h3>
           <p>Trecho de código.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>Use &lt;code&gt;display: grid;&lt;/code&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>Use &lt;code&gt;display: grid;&lt;/code&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="pre pré formatado">
           <h3><code>&lt;pre&gt;</code></h3>
           <p>Preserva espaços e quebras de linha.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;pre&gt;linha 1
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;pre&gt;linha 1
 linha 2&lt;/pre&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="samp saída programa">
           <h3><code>&lt;samp&gt;</code></h3>
           <p>Saída de programa.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;samp&gt;404 Not Found&lt;/samp&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;samp&gt;404 Not Found&lt;/samp&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="kbd teclado entrada usuário">
           <h3><code>&lt;kbd&gt;</code></h3>
           <p>Entrada do usuário/teclas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>Pressione &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>Pressione &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="var variável matemática">
           <h3><code>&lt;var&gt;</code></h3>
@@ -277,12 +277,12 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="data valor dados machine-readable">
           <h3><code>&lt;data&gt;</code></h3>
           <p>Associa texto legível a um valor de dados.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;data value="123"&gt;Produto #123&lt;/data&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;data value="123"&gt;Produto #123&lt;/data&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="output resultado cálculo formulário">
           <h3><code>&lt;output&gt;</code></h3>
           <p>Exibe resultado calculado.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;output id="total"&gt;0&lt;/output&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;output id="total"&gt;0&lt;/output&gt;</code></pre>
         </article>
       </div>
     </section>
@@ -297,14 +297,14 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="ol ul li lista itens">
           <h3><code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code></h3>
           <p>Listas ordenadas e não ordenadas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;ol&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;ol&gt;
   &lt;li&gt;Passo 1&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
         </article>
         <article class="tag-card" data-index="dl dt dd lista definições termo descrição">
           <h3><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></h3>
           <p>Termos e descrições.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dl&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;dl&gt;
   &lt;dt&gt;UX&lt;/dt&gt; &lt;dd&gt;Experiência do usuário&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
         </article>
@@ -321,7 +321,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="figure figcaption imagem legenda">
           <h3><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></h3>
           <p>Empacota mídia com legenda semântica.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;figure&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;figure&gt;
   &lt;img src="foto.jpg" alt="Paisagem de Brasília"&gt;
   &lt;figcaption&gt;Ipê-amarelo no parque&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
@@ -333,7 +333,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="picture source responsivo art direction">
           <h3><code>&lt;picture&gt;</code> + <code>&lt;source&gt;</code></h3>
           <p>Arte‑direção/resoluções diferentes por <code>media</code>.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;picture&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;picture&gt;
   &lt;source media="(min-width:800px)" srcset="hero-large.jpg"&gt;
   &lt;img src="hero-small.jpg" alt="…"&gt;
 &lt;/picture&gt;</code></pre>
@@ -341,7 +341,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="audio video track mídia legendas acessibilidade">
           <h3><code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;track&gt;</code></h3>
           <p>Mídia com controles; use <code>&lt;track kind="captions"&gt;</code> para legendas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;video controls&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;video controls&gt;
   &lt;source src="clip.mp4" type="video/mp4"&gt;
   &lt;track kind="captions" src="legendas.vtt" srclang="pt" label="Português"&gt;
 &lt;/video&gt;</code></pre>
@@ -363,7 +363,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="table caption thead tbody tfoot th td tr colgroup col">
           <h3><code>&lt;table&gt;</code> (subestruturas)</h3>
           <p><strong>caption</strong> (título), <strong>thead/tbody/tfoot</strong> (seções), <strong>tr</strong> (linha), <strong>th/td</strong> (células), <strong>colgroup/col</strong> (metadados/estilo).</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;table&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;table&gt;
   &lt;caption&gt;Vendas 2025&lt;/caption&gt;
   &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Mês&lt;/th&gt;&lt;th scope="col"&gt;Total&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
   &lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;R$ 10k&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
@@ -382,7 +382,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="form fieldset legend label">
           <h3><code>&lt;form&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;label&gt;</code></h3>
           <p>Estrutura e rótulos para acessibilidade.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;form&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;form&gt;
   &lt;label for="email"&gt;E-mail&lt;/label&gt;
   &lt;input id="email" type="email" required&gt;
 &lt;/form&gt;</code></pre>
@@ -416,7 +416,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="details summary colapsar expansão faq">
           <h3><code>&lt;details&gt;</code> + <code>&lt;summary&gt;</code></h3>
           <p>Seções expansíveis nativas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;details&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;details&gt;
   &lt;summary&gt;Perguntas frequentes&lt;/summary&gt;
   &lt;p&gt;Resposta…&lt;/p&gt;
 &lt;/details&gt;</code></pre>
@@ -424,7 +424,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="dialog modal showModal foco">
           <h3><code>&lt;dialog&gt;</code></h3>
           <p>Modal/diálogo; gerencie foco e tecla Esc.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;dialog id="dlg"&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;dialog id="dlg"&gt;
   &lt;p&gt;Olá!&lt;/p&gt;
   &lt;form method="dialog"&gt;&lt;button&gt;Fechar&lt;/button&gt;&lt;/form&gt;
 &lt;/dialog&gt;</code></pre>
@@ -442,7 +442,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="ruby rt rp anotação ideogramas">
           <h3><code>&lt;ruby&gt;</code>, <code>&lt;rt&gt;</code>, <code>&lt;rp&gt;</code></h3>
           <p>Anotações ruby para leitura de ideogramas.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;ruby&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;ruby&gt;
   漢 &lt;rt&gt;kan&lt;/rt&gt;
 &lt;/ruby&gt;</code></pre>
         </article>
@@ -453,7 +453,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="bdo direção forçada rtl ltr">
           <h3><code>&lt;bdo&gt;</code></h3>
           <p>Força direção <code>dir="rtl"</code> ou <code>dir="ltr"</code>.</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;bdo dir="rtl"&gt;abc&lt;/bdo&gt;</code></pre>
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;bdo dir="rtl"&gt;abc&lt;/bdo&gt;</code></pre>
         </article>
       </div>
     </section>
@@ -468,7 +468,7 @@ linha 2&lt;/pre&gt;</code></pre>
         <article class="tag-card" data-index="hr quebra tema seção">
           <h3><code>&lt;hr&gt;</code></h3>
           <p>Indica transição temática (não é apenas uma “linha”).</p>
-          <pre><button class="copy-btn" data-copy>Copiar</button><code>&lt;p&gt;Introdução…&lt;/p&gt;
+          <pre><button class="copy-btn" data-copy aria-pressed="false">Copiar</button><code>&lt;p&gt;Introdução…&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Conteúdo principal…&lt;/p&gt;</code></pre>
         </article>
@@ -552,94 +552,94 @@ linha 2&lt;/pre&gt;</code></pre>
         <p>Resumo em 1 linha para consulta imediata.</p>
       </header>
       <div class="az" role="list">
-        <div class="az-item" data-index="abbr abreviação"><code>&lt;abbr&gt;</code><span>abreviação (exibe expansão via <code>title</code>)</span></div>
-        <div class="az-item" data-index="address contato"><code>&lt;address&gt;</code><span>informações de contato</span></div>
-        <div class="az-item" data-index="article independente"><code>&lt;article&gt;</code><span>unidade independente (post, notícia)</span></div>
-        <div class="az-item" data-index="aside tangencial"><code>&lt;aside&gt;</code><span>conteúdo tangencial/metro</span></div>
-        <div class="az-item" data-index="audio mídia"><code>&lt;audio&gt;</code><span>áudio com controles</span></div>
-        <div class="az-item" data-index="b destaque"><code>&lt;b&gt;</code><span>destaque não semântico</span></div>
-        <div class="az-item" data-index="bdi bidi"><code>&lt;bdi&gt;</code><span>isola direção de texto</span></div>
-        <div class="az-item" data-index="bdo direção"><code>&lt;bdo&gt;</code><span>força direção de texto</span></div>
-        <div class="az-item" data-index="blockquote citação"><code>&lt;blockquote&gt;</code><span>citação em bloco</span></div>
-        <div class="az-item" data-index="button botão"><code>&lt;button&gt;</code><span>botões nativos</span></div>
-        <div class="az-item" data-index="caption título tabela"><code>&lt;caption&gt;</code><span>título de tabela</span></div>
-        <div class="az-item" data-index="cite obra"><code>&lt;cite&gt;</code><span>título de obra / referência</span></div>
-        <div class="az-item" data-index="code código"><code>&lt;code&gt;</code><span>trecho de código</span></div>
-        <div class="az-item" data-index="data"><code>&lt;data&gt;</code><span>valor de dados associado a texto</span></div>
-        <div class="az-item" data-index="datalist sugestões"><code>&lt;datalist&gt;</code><span>lista de sugestões para <code>&lt;input&gt;</code></span></div>
-        <div class="az-item" data-index="dd descrição"><code>&lt;dd&gt;</code><span>descrição de termo</span></div>
-        <div class="az-item" data-index="del removido"><code>&lt;del&gt;</code><span>conteúdo removido</span></div>
-        <div class="az-item" data-index="details divulgação"><code>&lt;details&gt;</code><span>seção expansível</span></div>
-        <div class="az-item" data-index="dfn definição"><code>&lt;dfn&gt;</code><span>termo definido</span></div>
-        <div class="az-item" data-index="dialog modal"><code>&lt;dialog&gt;</code><span>diálogo/modal</span></div>
-        <div class="az-item" data-index="dl lista definições"><code>&lt;dl&gt;</code><span>lista de definições</span></div>
-        <div class="az-item" data-index="dt termo"><code>&lt;dt&gt;</code><span>termo da definição</span></div>
-        <div class="az-item" data-index="em ênfase"><code>&lt;em&gt;</code><span>ênfase semântica</span></div>
-        <div class="az-item" data-index="figcaption"><code>&lt;figcaption&gt;</code><span>legenda de figura</span></div>
-        <div class="az-item" data-index="figure figura"><code>&lt;figure&gt;</code><span>mídia com legenda</span></div>
-        <div class="az-item" data-index="footer rodapé"><code>&lt;footer&gt;</code><span>rodapé</span></div>
-        <div class="az-item" data-index="form formulário"><code>&lt;form&gt;</code><span>contêiner de formulário</span></div>
-        <div class="az-item" data-index="h1 h2 h3 h4 h5 h6 títulos"><code>&lt;h1&gt;–&lt;h6&gt;</code><span>títulos</span></div>
-        <div class="az-item" data-index="hgroup subtítulo"><code>&lt;hgroup&gt;</code><span>agrupar título/subtítulo (uso raro)</span></div>
-        <div class="az-item" data-index="header cabeçalho"><code>&lt;header&gt;</code><span>cabeçalho</span></div>
-        <div class="az-item" data-index="hr quebra temática"><code>&lt;hr&gt;</code><span>quebra temática</span></div>
-        <div class="az-item" data-index="i voz alternativa"><code>&lt;i&gt;</code><span>voz alternativa</span></div>
-        <div class="az-item" data-index="iframe"><code>&lt;iframe&gt;</code><span>incorpora documento</span></div>
-        <div class="az-item" data-index="img imagem"><code>&lt;img&gt;</code><span>imagem embutida</span></div>
-        <div class="az-item" data-index="input"><code>&lt;input&gt;</code><span>campo de formulário (vários tipos)</span></div>
-        <div class="az-item" data-index="ins inserido"><code>&lt;ins&gt;</code><span>conteúdo inserido</span></div>
-        <div class="az-item" data-index="kbd teclado"><code>&lt;kbd&gt;</code><span>entrada do usuário</span></div>
-        <div class="az-item" data-index="label rótulo"><code>&lt;label&gt;</code><span>rótulo associado</span></div>
-        <div class="az-item" data-index="legend grupo"><code>&lt;legend&gt;</code><span>título de <code>&lt;fieldset&gt;</code></span></div>
-        <div class="az-item" data-index="li item"><code>&lt;li&gt;</code><span>item de lista</span></div>
-        <div class="az-item" data-index="link recurso"><code>&lt;link&gt;</code><span>relação com recurso (CSS, ícones)</span></div>
-        <div class="az-item" data-index="main conteúdo principal"><code>&lt;main&gt;</code><span>conteúdo principal</span></div>
-        <div class="az-item" data-index="mark realce"><code>&lt;mark&gt;</code><span>realce contextual</span></div>
-        <div class="az-item" data-index="meta metadados"><code>&lt;meta&gt;</code><span>metadados do documento</span></div>
-        <div class="az-item" data-index="meter medida"><code>&lt;meter&gt;</code><span>medida escalar</span></div>
-        <div class="az-item" data-index="nav navegação"><code>&lt;nav&gt;</code><span>navegação</span></div>
-        <div class="az-item" data-index="noscript fallback"><code>&lt;noscript&gt;</code><span>fallback sem script</span></div>
-        <div class="az-item" data-index="object plugin"><code>&lt;object&gt;</code><span>objeto/plugin embutido</span></div>
-        <div class="az-item" data-index="ol lista ordenada"><code>&lt;ol&gt;</code><span>lista ordenada</span></div>
-        <div class="az-item" data-index="optgroup opções agrupadas"><code>&lt;optgroup&gt;</code><span>grupo de opções</span></div>
-        <div class="az-item" data-index="option opção"><code>&lt;option&gt;</code><span>opção de lista</span></div>
-        <div class="az-item" data-index="output resultado"><code>&lt;output&gt;</code><span>resultado de cálculo</span></div>
-        <div class="az-item" data-index="p parágrafo"><code>&lt;p&gt;</code><span>parágrafo</span></div>
-        <div class="az-item" data-index="picture imagem responsiva"><code>&lt;picture&gt;</code><span>imagem responsiva</span></div>
-        <div class="az-item" data-index="pre pré-formatado"><code>&lt;pre&gt;</code><span>texto pré-formatado</span></div>
-        <div class="az-item" data-index="progress progresso"><code>&lt;progress&gt;</code><span>barra de progresso</span></div>
-        <div class="az-item" data-index="q citação curta"><code>&lt;q&gt;</code><span>citação inline</span></div>
-        <div class="az-item" data-index="ruby anotação"><code>&lt;ruby&gt;</code><span>anotação ruby</span></div>
-        <div class="az-item" data-index="rt ruby texto"><code>&lt;rt&gt;</code><span>texto ruby</span></div>
-        <div class="az-item" data-index="rp parênteses ruby"><code>&lt;rp&gt;</code><span>parênteses de fallback</span></div>
-        <div class="az-item" data-index="s riscado"><code>&lt;s&gt;</code><span>texto obsoleto</span></div>
-        <div class="az-item" data-index="samp saída"><code>&lt;samp&gt;</code><span>saída de programa</span></div>
-        <div class="az-item" data-index="script"><code>&lt;script&gt;</code><span>código JavaScript</span></div>
-        <div class="az-item" data-index="section seção"><code>&lt;section&gt;</code><span>seção temática</span></div>
-        <div class="az-item" data-index="select lista seleção"><code>&lt;select&gt;</code><span>lista de seleção</span></div>
-        <div class="az-item" data-index="small texto pequeno"><code>&lt;small&gt;</code><span>texto secundário</span></div>
-        <div class="az-item" data-index="source mídia"><code>&lt;source&gt;</code><span>fonte de mídia</span></div>
-        <div class="az-item" data-index="span inline"><code>&lt;span&gt;</code><span>inline genérico</span></div>
-        <div class="az-item" data-index="strong ênfase forte"><code>&lt;strong&gt;</code><span>ênfase forte</span></div>
-        <div class="az-item" data-index="sub subscrito"><code>&lt;sub&gt;</code><span>subscrito</span></div>
-        <div class="az-item" data-index="summary resumo"><code>&lt;summary&gt;</code><span>resumo de details</span></div>
-        <div class="az-item" data-index="sup sobrescrito"><code>&lt;sup&gt;</code><span>sobrescrito</span></div>
-        <div class="az-item" data-index="table tabela"><code>&lt;table&gt;</code><span>tabela de dados</span></div>
-        <div class="az-item" data-index="tbody corpo tabela"><code>&lt;tbody&gt;</code><span>corpo da tabela</span></div>
-        <div class="az-item" data-index="td célula dados"><code>&lt;td&gt;</code><span>célula de dados</span></div>
-        <div class="az-item" data-index="textarea texto multilinha"><code>&lt;textarea&gt;</code><span>campo multilinha</span></div>
-        <div class="az-item" data-index="tfoot rodapé tabela"><code>&lt;tfoot&gt;</code><span>rodapé da tabela</span></div>
-        <div class="az-item" data-index="th célula cabeçalho"><code>&lt;th&gt;</code><span>célula de cabeçalho</span></div>
-        <div class="az-item" data-index="thead cabeçalho tabela"><code>&lt;thead&gt;</code><span>cabeçalho da tabela</span></div>
-        <div class="az-item" data-index="time data hora"><code>&lt;time&gt;</code><span>data/hora</span></div>
-        <div class="az-item" data-index="title título"><code>&lt;title&gt;</code><span>título do documento</span></div>
-        <div class="az-item" data-index="tr linha tabela"><code>&lt;tr&gt;</code><span>linha da tabela</span></div>
-        <div class="az-item" data-index="track legenda"><code>&lt;track&gt;</code><span>faixa de legenda</span></div>
-        <div class="az-item" data-index="u sublinhado"><code>&lt;u&gt;</code><span>anotação sublinhada</span></div>
-        <div class="az-item" data-index="ul lista não ordenada"><code>&lt;ul&gt;</code><span>lista não ordenada</span></div>
-        <div class="az-item" data-index="var variável"><code>&lt;var&gt;</code><span>variável</span></div>
-        <div class="az-item" data-index="video vídeo"><code>&lt;video&gt;</code><span>vídeo com controles</span></div>
-        <div class="az-item" data-index="wbr quebra opcional"><code>&lt;wbr&gt;</code><span>quebra de linha opcional</span></div>
+        <div class="az-item" data-index="abbr abreviação" role="listitem"><h4><code>&lt;abbr&gt;</code></h4><span>abreviação (exibe expansão via <code>title</code>)</span></div>
+        <div class="az-item" data-index="address contato" role="listitem"><h4><code>&lt;address&gt;</code></h4><span>informações de contato</span></div>
+        <div class="az-item" data-index="article independente" role="listitem"><h4><code>&lt;article&gt;</code></h4><span>unidade independente (post, notícia)</span></div>
+        <div class="az-item" data-index="aside tangencial" role="listitem"><h4><code>&lt;aside&gt;</code></h4><span>conteúdo tangencial/metro</span></div>
+        <div class="az-item" data-index="audio mídia" role="listitem"><h4><code>&lt;audio&gt;</code></h4><span>áudio com controles</span></div>
+        <div class="az-item" data-index="b destaque" role="listitem"><h4><code>&lt;b&gt;</code></h4><span>destaque não semântico</span></div>
+        <div class="az-item" data-index="bdi bidi" role="listitem"><h4><code>&lt;bdi&gt;</code></h4><span>isola direção de texto</span></div>
+        <div class="az-item" data-index="bdo direção" role="listitem"><h4><code>&lt;bdo&gt;</code></h4><span>força direção de texto</span></div>
+        <div class="az-item" data-index="blockquote citação" role="listitem"><h4><code>&lt;blockquote&gt;</code></h4><span>citação em bloco</span></div>
+        <div class="az-item" data-index="button botão" role="listitem"><h4><code>&lt;button&gt;</code></h4><span>botões nativos</span></div>
+        <div class="az-item" data-index="caption título tabela" role="listitem"><h4><code>&lt;caption&gt;</code></h4><span>título de tabela</span></div>
+        <div class="az-item" data-index="cite obra" role="listitem"><h4><code>&lt;cite&gt;</code></h4><span>título de obra / referência</span></div>
+        <div class="az-item" data-index="code código" role="listitem"><h4><code>&lt;code&gt;</code></h4><span>trecho de código</span></div>
+        <div class="az-item" data-index="data" role="listitem"><h4><code>&lt;data&gt;</code></h4><span>valor de dados associado a texto</span></div>
+        <div class="az-item" data-index="datalist sugestões" role="listitem"><h4><code>&lt;datalist&gt;</code></h4><span>lista de sugestões para <code>&lt;input&gt;</code></span></div>
+        <div class="az-item" data-index="dd descrição" role="listitem"><h4><code>&lt;dd&gt;</code></h4><span>descrição de termo</span></div>
+        <div class="az-item" data-index="del removido" role="listitem"><h4><code>&lt;del&gt;</code></h4><span>conteúdo removido</span></div>
+        <div class="az-item" data-index="details divulgação" role="listitem"><h4><code>&lt;details&gt;</code></h4><span>seção expansível</span></div>
+        <div class="az-item" data-index="dfn definição" role="listitem"><h4><code>&lt;dfn&gt;</code></h4><span>termo definido</span></div>
+        <div class="az-item" data-index="dialog modal" role="listitem"><h4><code>&lt;dialog&gt;</code></h4><span>diálogo/modal</span></div>
+        <div class="az-item" data-index="dl lista definições" role="listitem"><h4><code>&lt;dl&gt;</code></h4><span>lista de definições</span></div>
+        <div class="az-item" data-index="dt termo" role="listitem"><h4><code>&lt;dt&gt;</code></h4><span>termo da definição</span></div>
+        <div class="az-item" data-index="em ênfase" role="listitem"><h4><code>&lt;em&gt;</code></h4><span>ênfase semântica</span></div>
+        <div class="az-item" data-index="figcaption" role="listitem"><h4><code>&lt;figcaption&gt;</code></h4><span>legenda de figura</span></div>
+        <div class="az-item" data-index="figure figura" role="listitem"><h4><code>&lt;figure&gt;</code></h4><span>mídia com legenda</span></div>
+        <div class="az-item" data-index="footer rodapé" role="listitem"><h4><code>&lt;footer&gt;</code></h4><span>rodapé</span></div>
+        <div class="az-item" data-index="form formulário" role="listitem"><h4><code>&lt;form&gt;</code></h4><span>contêiner de formulário</span></div>
+        <div class="az-item" data-index="h1 h2 h3 h4 h5 h6 títulos" role="listitem"><h4><code>&lt;h1&gt;–&lt;h6&gt;</code></h4><span>títulos</span></div>
+        <div class="az-item" data-index="hgroup subtítulo" role="listitem"><h4><code>&lt;hgroup&gt;</code></h4><span>agrupar título/subtítulo (uso raro)</span></div>
+        <div class="az-item" data-index="header cabeçalho" role="listitem"><h4><code>&lt;header&gt;</code></h4><span>cabeçalho</span></div>
+        <div class="az-item" data-index="hr quebra temática" role="listitem"><h4><code>&lt;hr&gt;</code></h4><span>quebra temática</span></div>
+        <div class="az-item" data-index="i voz alternativa" role="listitem"><h4><code>&lt;i&gt;</code></h4><span>voz alternativa</span></div>
+        <div class="az-item" data-index="iframe" role="listitem"><h4><code>&lt;iframe&gt;</code></h4><span>incorpora documento</span></div>
+        <div class="az-item" data-index="img imagem" role="listitem"><h4><code>&lt;img&gt;</code></h4><span>imagem embutida</span></div>
+        <div class="az-item" data-index="input" role="listitem"><h4><code>&lt;input&gt;</code></h4><span>campo de formulário (vários tipos)</span></div>
+        <div class="az-item" data-index="ins inserido" role="listitem"><h4><code>&lt;ins&gt;</code></h4><span>conteúdo inserido</span></div>
+        <div class="az-item" data-index="kbd teclado" role="listitem"><h4><code>&lt;kbd&gt;</code></h4><span>entrada do usuário</span></div>
+        <div class="az-item" data-index="label rótulo" role="listitem"><h4><code>&lt;label&gt;</code></h4><span>rótulo associado</span></div>
+        <div class="az-item" data-index="legend grupo" role="listitem"><h4><code>&lt;legend&gt;</code></h4><span>título de <code>&lt;fieldset&gt;</code></span></div>
+        <div class="az-item" data-index="li item" role="listitem"><h4><code>&lt;li&gt;</code></h4><span>item de lista</span></div>
+        <div class="az-item" data-index="link recurso" role="listitem"><h4><code>&lt;link&gt;</code></h4><span>relação com recurso (CSS, ícones)</span></div>
+        <div class="az-item" data-index="main conteúdo principal" role="listitem"><h4><code>&lt;main&gt;</code></h4><span>conteúdo principal</span></div>
+        <div class="az-item" data-index="mark realce" role="listitem"><h4><code>&lt;mark&gt;</code></h4><span>realce contextual</span></div>
+        <div class="az-item" data-index="meta metadados" role="listitem"><h4><code>&lt;meta&gt;</code></h4><span>metadados do documento</span></div>
+        <div class="az-item" data-index="meter medida" role="listitem"><h4><code>&lt;meter&gt;</code></h4><span>medida escalar</span></div>
+        <div class="az-item" data-index="nav navegação" role="listitem"><h4><code>&lt;nav&gt;</code></h4><span>navegação</span></div>
+        <div class="az-item" data-index="noscript fallback" role="listitem"><h4><code>&lt;noscript&gt;</code></h4><span>fallback sem script</span></div>
+        <div class="az-item" data-index="object plugin" role="listitem"><h4><code>&lt;object&gt;</code></h4><span>objeto/plugin embutido</span></div>
+        <div class="az-item" data-index="ol lista ordenada" role="listitem"><h4><code>&lt;ol&gt;</code></h4><span>lista ordenada</span></div>
+        <div class="az-item" data-index="optgroup opções agrupadas" role="listitem"><h4><code>&lt;optgroup&gt;</code></h4><span>grupo de opções</span></div>
+        <div class="az-item" data-index="option opção" role="listitem"><h4><code>&lt;option&gt;</code></h4><span>opção de lista</span></div>
+        <div class="az-item" data-index="output resultado" role="listitem"><h4><code>&lt;output&gt;</code></h4><span>resultado de cálculo</span></div>
+        <div class="az-item" data-index="p parágrafo" role="listitem"><h4><code>&lt;p&gt;</code></h4><span>parágrafo</span></div>
+        <div class="az-item" data-index="picture imagem responsiva" role="listitem"><h4><code>&lt;picture&gt;</code></h4><span>imagem responsiva</span></div>
+        <div class="az-item" data-index="pre pré-formatado" role="listitem"><h4><code>&lt;pre&gt;</code></h4><span>texto pré-formatado</span></div>
+        <div class="az-item" data-index="progress progresso" role="listitem"><h4><code>&lt;progress&gt;</code></h4><span>barra de progresso</span></div>
+        <div class="az-item" data-index="q citação curta" role="listitem"><h4><code>&lt;q&gt;</code></h4><span>citação inline</span></div>
+        <div class="az-item" data-index="ruby anotação" role="listitem"><h4><code>&lt;ruby&gt;</code></h4><span>anotação ruby</span></div>
+        <div class="az-item" data-index="rt ruby texto" role="listitem"><h4><code>&lt;rt&gt;</code></h4><span>texto ruby</span></div>
+        <div class="az-item" data-index="rp parênteses ruby" role="listitem"><h4><code>&lt;rp&gt;</code></h4><span>parênteses de fallback</span></div>
+        <div class="az-item" data-index="s riscado" role="listitem"><h4><code>&lt;s&gt;</code></h4><span>texto obsoleto</span></div>
+        <div class="az-item" data-index="samp saída" role="listitem"><h4><code>&lt;samp&gt;</code></h4><span>saída de programa</span></div>
+        <div class="az-item" data-index="script" role="listitem"><h4><code>&lt;script&gt;</code></h4><span>código JavaScript</span></div>
+        <div class="az-item" data-index="section seção" role="listitem"><h4><code>&lt;section&gt;</code></h4><span>seção temática</span></div>
+        <div class="az-item" data-index="select lista seleção" role="listitem"><h4><code>&lt;select&gt;</code></h4><span>lista de seleção</span></div>
+        <div class="az-item" data-index="small texto pequeno" role="listitem"><h4><code>&lt;small&gt;</code></h4><span>texto secundário</span></div>
+        <div class="az-item" data-index="source mídia" role="listitem"><h4><code>&lt;source&gt;</code></h4><span>fonte de mídia</span></div>
+        <div class="az-item" data-index="span inline" role="listitem"><h4><code>&lt;span&gt;</code></h4><span>inline genérico</span></div>
+        <div class="az-item" data-index="strong ênfase forte" role="listitem"><h4><code>&lt;strong&gt;</code></h4><span>ênfase forte</span></div>
+        <div class="az-item" data-index="sub subscrito" role="listitem"><h4><code>&lt;sub&gt;</code></h4><span>subscrito</span></div>
+        <div class="az-item" data-index="summary resumo" role="listitem"><h4><code>&lt;summary&gt;</code></h4><span>resumo de details</span></div>
+        <div class="az-item" data-index="sup sobrescrito" role="listitem"><h4><code>&lt;sup&gt;</code></h4><span>sobrescrito</span></div>
+        <div class="az-item" data-index="table tabela" role="listitem"><h4><code>&lt;table&gt;</code></h4><span>tabela de dados</span></div>
+        <div class="az-item" data-index="tbody corpo tabela" role="listitem"><h4><code>&lt;tbody&gt;</code></h4><span>corpo da tabela</span></div>
+        <div class="az-item" data-index="td célula dados" role="listitem"><h4><code>&lt;td&gt;</code></h4><span>célula de dados</span></div>
+        <div class="az-item" data-index="textarea texto multilinha" role="listitem"><h4><code>&lt;textarea&gt;</code></h4><span>campo multilinha</span></div>
+        <div class="az-item" data-index="tfoot rodapé tabela" role="listitem"><h4><code>&lt;tfoot&gt;</code></h4><span>rodapé da tabela</span></div>
+        <div class="az-item" data-index="th célula cabeçalho" role="listitem"><h4><code>&lt;th&gt;</code></h4><span>célula de cabeçalho</span></div>
+        <div class="az-item" data-index="thead cabeçalho tabela" role="listitem"><h4><code>&lt;thead&gt;</code></h4><span>cabeçalho da tabela</span></div>
+        <div class="az-item" data-index="time data hora" role="listitem"><h4><code>&lt;time&gt;</code></h4><span>data/hora</span></div>
+        <div class="az-item" data-index="title título" role="listitem"><h4><code>&lt;title&gt;</code></h4><span>título do documento</span></div>
+        <div class="az-item" data-index="tr linha tabela" role="listitem"><h4><code>&lt;tr&gt;</code></h4><span>linha da tabela</span></div>
+        <div class="az-item" data-index="track legenda" role="listitem"><h4><code>&lt;track&gt;</code></h4><span>faixa de legenda</span></div>
+        <div class="az-item" data-index="u sublinhado" role="listitem"><h4><code>&lt;u&gt;</code></h4><span>anotação sublinhada</span></div>
+        <div class="az-item" data-index="ul lista não ordenada" role="listitem"><h4><code>&lt;ul&gt;</code></h4><span>lista não ordenada</span></div>
+        <div class="az-item" data-index="var variável" role="listitem"><h4><code>&lt;var&gt;</code></h4><span>variável</span></div>
+        <div class="az-item" data-index="video vídeo" role="listitem"><h4><code>&lt;video&gt;</code></h4><span>vídeo com controles</span></div>
+        <div class="az-item" data-index="wbr quebra opcional" role="listitem"><h4><code>&lt;wbr&gt;</code></h4><span>quebra de linha opcional</span></div>
       </div>
     </section>
 

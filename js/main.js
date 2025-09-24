@@ -159,6 +159,7 @@
 
       button.textContent = feedbackText;
       button.setAttribute('aria-label', feedbackText);
+      button.setAttribute('aria-pressed', success ? 'true' : 'false');
 
       // Add visual feedback class
       button.classList.add(success ? 'copy-success' : 'copy-error');
@@ -166,6 +167,7 @@
       setTimeout(() => {
         button.textContent = originalText;
         button.removeAttribute('aria-label');
+        button.setAttribute('aria-pressed', 'false');
         button.classList.remove('copy-success', 'copy-error');
       }, 2000);
     }

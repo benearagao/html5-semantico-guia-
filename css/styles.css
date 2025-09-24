@@ -130,7 +130,8 @@ body {
 
 .chip:hover {
   transform: translateY(-1px);
-  border-color: color-mix(in oklab, var(--accent), transparent 30%);
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent), transparent 90%);
 }
 
 .chip .dot {
@@ -309,7 +310,8 @@ code {
 }
 
 .copy-btn:hover {
-  border-color: color-mix(in oklab, var(--accent), transparent 35%);
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent), transparent 85%);
 }
 
 .copy-btn.copy-success {
@@ -343,6 +345,12 @@ code {
 }
 
 .az-item code {
+  font-weight: 700;
+}
+
+.az-item h4 {
+  margin: 0;
+  font-size: 16px;
   font-weight: 700;
 }
 
